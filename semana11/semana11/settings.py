@@ -117,6 +117,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
+STATICFILES_DIRS = [ BASE_DIR / "static"]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
@@ -127,16 +128,14 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 JAZZMIN_SETTINGS = {
     "site_title": "Semana 11 Admin",
-    "site_header": "Semana 11 💻",
-    "site_brand": "MiProfeUwU",
-    "site_logo": "img/mi_logo.png",          # logo en la esquina superior izquierda
-    "login_logo": "img/mi_logo_login.png",  # logo exclusivo para la pantalla de login
-    "login_logo_dark": "img/mi_logo_login_dark.png",
-    "site_icon": "img/favicon.png",         # favicon en pestañas
+    "site_brand": "Nahomi UwU",
+    "site_logo": "img/user_avatar.jpg",          # logo en la esquina superior izquierda
+    "login_logo": "img/login_logo.jpeg",  # logo exclusivo para la pantalla de login
+    # "login_logo_dark": "img/mi_logo_login_dark.png",
 
     "welcome_sign": "Bienvenida, guapísima 🎀",
-    "copyright": "© 2025 Nahomi ❤️",
-    "user_avatar": "profile.avatar_url",     # si tu modelo User tiene avatar_url
+    "copyright": "Nahomi ❤️",
+    # "user_avatar": "profile.avatar_url",     # si tu modelo User tiene avatar_url
 
     "topmenu_links": [
         {"name": "Inicio", "url": "admin:index", "permissions": ["auth.view_user"]},
@@ -145,7 +144,7 @@ JAZZMIN_SETTINGS = {
 
     "usermenu_links": [
         {"name": "Mi Perfil", "url": "/admin/auth/user/", "icon": "fas fa-user-circle"},
-        {"name": "Salir", "url": "admin:logout", "icon": "fas fa-sign-out-alt"},
+        # {"name": "Salir", "url": "admin:logout", "icon": "fas fa-sign-out-alt"},
     ],
 
     "icons": {
@@ -164,22 +163,30 @@ JAZZMIN_SETTINGS = {
 
     "related_modal_active": True,
     "changeform_format": "horizontal_tabs",
-    "language_chooser": True,
+    # "language_chooser": True,
 }
 
 # Personalización visual avanzada:
 JAZZMIN_UI_TWEAKS = {
-    "theme": "flatly",              # tema claro y fresh
-    "dark_mode_theme": "darkly",    # modo oscuro elegante
+    "theme": "flaty",              # tema claro y fresh
+    # "dark_mode_theme": "darkly",    # modo oscuro elegante
+    "accent": "accent-pink",
+
     "compact_sidebar": True,
     "navigation_fixed": True,
+
     "sidebar_light": True,
+
     "navbar_small_text": False,
     "footer_small_text": True,
     "body_small_text": False,
     "brand_small_text": False,
-    "accent": "accent-success",
-    "navbar": "navbar-dark navbar-success",
+
+    "navbar": "navbar-dark navbar-pink",
+    "sidebar_nav_flat_style": True,
+
+    "brand_colour": "navbar-pink",
+
     "no_navbar_border": True,
     "sidebar_nav_flat_style": True,
     "sidebar_nav_legacy_style": False,
