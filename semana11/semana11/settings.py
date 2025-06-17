@@ -126,19 +126,61 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Probanding Jazzmin
 
 JAZZMIN_SETTINGS = {
-    # title of the window (Will default to current_admin_site.site_title if absent or None)
     "site_title": "Semana 11 Admin",
+    "site_header": "Semana 11 💻",
+    "site_brand": "MiProfeUwU",
+    "site_logo": "img/mi_logo.png",          # logo en la esquina superior izquierda
+    "login_logo": "img/mi_logo_login.png",  # logo exclusivo para la pantalla de login
+    "login_logo_dark": "img/mi_logo_login_dark.png",
+    "site_icon": "img/favicon.png",         # favicon en pestañas
+
+    "welcome_sign": "Bienvenida, guapísima 🎀",
+    "copyright": "© 2025 Nahomi ❤️",
+    "user_avatar": "profile.avatar_url",     # si tu modelo User tiene avatar_url
 
     "topmenu_links": [
-
-        # Url that gets reversed (Permissions can be added)
-        {"name": "Home",  "url": "admin:index", "permissions": ["auth.view_user"]},
-
-        # external url that opens in a new window (Permissions can be added)
-        {"name": "Support", "url": "https://github.com/farridav/django-jazzmin/issues", "new_window": True},
+        {"name": "Inicio", "url": "admin:index", "permissions": ["auth.view_user"]},
+        {"name": "GitHub", "url": "https://github.com/nahomi2004/Jazzmin-Django", "new_window": True},
     ],
 
-    "user_avatar": "../img/avatar.png",
+    "usermenu_links": [
+        {"name": "Mi Perfil", "url": "/admin/auth/user/", "icon": "fas fa-user-circle"},
+        {"name": "Salir", "url": "admin:logout", "icon": "fas fa-sign-out-alt"},
+    ],
 
-    "site_icon": "semana11/img/avatar.png",
-} 
+    "icons": {
+        "app1.departamento": "fas fa-building",
+        "app1.instructor": "fas fa-chalkboard-teacher",
+        "app1.curso": "fas fa-book-open",
+        "app1.estudiante": "fas fa-user-graduate",
+        "app1.inscripcion": "fas fa-clipboard-list",
+        "app1.tarea": "fas fa-tasks",
+        "app1.entrega": "fas fa-paper-plane",
+    },
+
+    "show_sidebar": True,
+    "navigation_expanded": True,
+    "order_with_respect_to": ["app1", "app1.departamento", "app1.curso", "app1.estudiante"],
+
+    "related_modal_active": True,
+    "changeform_format": "horizontal_tabs",
+    "language_chooser": True,
+}
+
+# Personalización visual avanzada:
+JAZZMIN_UI_TWEAKS = {
+    "theme": "flatly",              # tema claro y fresh
+    "dark_mode_theme": "darkly",    # modo oscuro elegante
+    "compact_sidebar": True,
+    "navigation_fixed": True,
+    "sidebar_light": True,
+    "navbar_small_text": False,
+    "footer_small_text": True,
+    "body_small_text": False,
+    "brand_small_text": False,
+    "accent": "accent-success",
+    "navbar": "navbar-dark navbar-success",
+    "no_navbar_border": True,
+    "sidebar_nav_flat_style": True,
+    "sidebar_nav_legacy_style": False,
+}
