@@ -137,4 +137,8 @@ JAZZMIN_SETTINGS = {
         # external url that opens in a new window (Permissions can be added)
         {"name": "Support", "url": "https://github.com/farridav/django-jazzmin/issues", "new_window": True},
     ],
+
+    "user_avatar": "../img/avatar.png",
+
+    "site_icon": "semana11/img/avatar.png",
 } 
